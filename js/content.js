@@ -165,22 +165,22 @@ window.SmartWash.CONTENT = {
     footer: { tagline: 'Spălare auto fără apă, în Sibiu.', rights: '© 2026 SmartWash. Toate drepturile rezervate.' },
 
     home: {
-      badge: 'Fără apă · pe loc · Sibiu',
-      title: 'Mașina curată,\nfără bătaie de cap.',
-      subtitle: 'Parchezi la oricare dintre locațiile noastre, iar noi spălăm mașina manual, fără apă, cât timp tu faci cumpărături, lucrezi sau te relaxezi. Fără programare, fără așteptare, fără efort din partea ta.',
+      badge: 'Fără apă · direct la tine · Sibiu',
+      title: 'Mașină curată,\nfără bătaie de cap.',
+      subtitle: 'Parchezi la oricare dintre locațiile noastre și lași mașina pe mâinile noastre — o spălăm manual, fără apă, cât faci cumpărături, lucrezi sau te relaxezi. Fără programare, fără așteptare, fără bătaie de cap.',
       ctaCall: 'Sună acum', ctaWhatsapp: 'Scrie-ne pe WhatsApp',
 
-      locationsIntro: 'În prezent operăm la',
+      locationsIntro: 'Ne găsești acum la',
 
-      benefitsTitle: 'De ce aleg oamenii SmartWash',
+      benefitsTitle: 'De ce aleg clienții SmartWash',
       benefitsSubtitle: 'Totul e gândit să-ți economisească timp și energie.',
       benefits: [
-        { t: 'Fără programare', d: 'Doar parchezi. Fără programare, fără aplicație, fără așteptat un interval liber.' },
+        { t: 'Fără programare', d: 'Doar parchezi — fără programare, fără aplicație de instalat, fără să aștepți un loc liber.' },
         { t: 'Zero timp de așteptare', d: 'Începem imediat — nu stai niciodată la coadă.' },
-        { t: 'Fără spălare pe cont propriu', d: 'Echipa noastră face toată treaba, manual. Tu nu faci nimic.' },
-        { t: 'Notificări pe telefon', d: 'Îți scriem exact când mașina e gata — nu trebuie să verifici tu.' },
-        { t: 'Plată online sau cu cardul', d: 'Plătești cu cardul sau online. Fără numerar, niciodată.' },
-        { t: 'Timpul tău rămâne al tău', d: 'Faci cumpărături, mănânci, bei o cafea, vezi un film — noi ne ocupăm de restul.' },
+        { t: 'Fără spălare pe cont propriu', d: 'Echipa noastră face toată treaba, manual — tu nu ridici un deget.' },
+        { t: 'Notificări pe telefon', d: 'Te anunțăm imediat ce mașina e gata, ca să nu tot verifici.' },
+        { t: 'Plată online sau cu cardul', d: 'Plătești cu cardul sau online — fără numerar.' },
+        { t: 'Timpul tău rămâne al tău', d: 'Faci cumpărături, mănânci ceva, bei o cafea sau vezi un film — noi ne ocupăm de mașină.' },
       ],
 
       stats: [ { value: '99.3%', label: 'apă mai puțină' }, { value: '30-45 min', label: 'durata medie' }, { value: '0', label: 'drumuri la spălătorie' } ],
@@ -188,29 +188,29 @@ window.SmartWash.CONTENT = {
       servicesTitle: 'Prețuri', servicesSubtitle: 'Două opțiuni. Fără costuri ascunse.',
       services: [
         { name: 'Spălare Exterior', desc: 'Spălare exterioară manuală — caroserie, jante, anvelope și geamuri, complet fără apă.', price: '45 lei', duration: '25\u201330 min' },
-        { name: 'Exterior + Interior', desc: 'Spălare exterioară completă plus aspirare interior, bord și consolă.', price: '65 lei', duration: '40\u201345 min' },
+        { name: 'Exterior + Interior', desc: 'Spălare exterioară completă, plus aspirare interior, bord și consolă.', price: '65 lei', duration: '40\u201345 min' },
       ],
 
       howTitle: 'Cum funcționează',
       steps: [
         { t: 'Parchezi la oricare locație' },
-        { t: 'Vorbești cu atendentul nostru' },
+        { t: 'Vorbești cu unul dintre colegii noștri' },
         { t: 'Plătești cu cardul sau online' },
-        { t: 'Te bucuri de destinația ta' },
+        { t: 'Îți vezi de treabă' },
         { t: 'Te întorci la o mașină impecabilă' },
       ],
 
       ecoTeaserTitle: 'De ce fără apă',
-      ecoTeaserHeading: 'O spălare care renunță complet la furtun',
-      ecoTeaserText: 'Fiecare vizită SmartWash folosește doar o fracțiune din apa unei spălări clasice — fără robinet, fără canalizare, fără reziduuri. Vrei să afli cum funcționează procesul?',
+      ecoTeaserHeading: 'O spălare care nu are nevoie de furtun',
+      ecoTeaserText: 'Fiecare vizită SmartWash folosește doar o fracțiune din apa unei spălări clasice — fără robinet, fără canalizare, fără reziduuri. Vrei să vezi cum funcționează, pas cu pas?',
       ecoTeaserLink: 'Vezi cum funcționează',
 
       mapTitle: 'Unde ne găsești',
-      mapSubtitle: 'Parchezi la oricare dintre locațiile noastre din Sibiu — fără nevoie de programare.',
+      mapSubtitle: 'Parchezi la oricare dintre locațiile noastre din Sibiu, fără nicio programare.',
 
       testimonialsTitle: 'Ce spun clienții',
       testimonials: [
-        { name: 'Ioana Marinescu', quote: 'Nu mi-a mai rămas timp de pierdut la spălătorie — au venit la birou și mașina a fost gata cât am fost eu în ședințe.' },
+        { name: 'Ioana Marinescu', quote: 'Nu mi-a mai rămas timp de pierdut la spălătorie — au venit la birou și mașina era gata cât am fost eu în ședințe.' },
         { name: 'Cristian Radu', quote: 'Seriozitate și punctualitate — exact ce cauți când lași mașina pe mâna altcuiva.' },
       ],
 
@@ -220,42 +220,42 @@ window.SmartWash.CONTENT = {
     about: {
       badge: 'Cum funcționează',
       title: 'Spălarea fără apă, pe înțelesul tuturor',
-      subtitle: 'Ce înseamnă cu adevărat "fără apă", de ce funcționează, și de ce e mai bună decât alternativele.',
+      subtitle: 'Ce înseamnă cu adevărat "fără apă", de ce funcționează și de ce bate toate alternativele.',
 
       whatTitle: 'Ce este o spălare auto fără apă?',
-      whatText: 'În loc să folosim furtunul, aplicăm o soluție de curățare bogată în polimeri direct pe fiecare panou. Polimerii înconjoară particulele de praf și murdărie și le desprind de pe vopsea, astfel încât laveta din microfibră le poate ridica ușor, fără să le frece în vopsea. Fără furtun, fără găleată, fără reziduuri — doar un flacon, o lavetă și o mână de om priceput.',
+      whatText: 'În loc de furtun, folosim o soluție de curățare bogată în polimeri, aplicată direct pe fiecare panou. Polimerii înconjoară praful și murdăria și le desprind de pe vopsea, așa că laveta din microfibră le ridică ușor, fără să le frece în vopsea. Fără furtun, fără găleată, fără reziduuri — doar un flacon, o lavetă și o mână de om priceput.',
 
       chemistryTitle: 'Chimia, pe scurt',
       chemistryPoints: [
         { t: 'Încapsulează murdăria', d: 'Polimerii lubrifianți înconjoară particulele astfel încât se ridică, nu zgârie stratul de lac.' },
         { t: 'pH echilibrat', d: 'Sigur pentru orice tip de vopsea, garnitură sau finisaj — nimic abraziv, nimic acid.' },
         { t: 'Lasă un strat protector', d: 'După fiecare spălare rămâne un finisaj ușor, rezistent la apă și raze UV.' },
-        { t: 'Formulă biodegradabilă', d: 'Nimic nu ajunge în canalizare, iar puținul reziduu rămas se descompune curat.' },
+        { t: 'Formulă biodegradabilă', d: 'Nimic nu ajunge în canalizare, iar ce rămâne se descompune ușor, fără urme.' },
       ],
 
       stepsTitle: 'Procesul, pas cu pas',
       steps: [
-        { t: 'Verificare și scuturare praf', d: 'Un tur rapid și o scuturare ușoară, ca să nu tragem praful peste vopsea.' },
+        { t: 'Verificare și scuturare praf', d: 'O verificare rapidă și o scuturare ușoară, ca să nu frecăm praful în vopsea mai târziu.' },
         { t: 'Soluție fără apă, panou cu panou', d: 'Soluția de curățare se aplică secțiune cu secțiune, fără să se usuce pe suprafață.' },
-        { t: 'Ridicăm, nu frecăm', d: 'O lavetă curată din microfibră ridică murdăria desprinsă cu presiune ușoară, împăturită des.' },
+        { t: 'Ridicăm, nu frecăm', d: 'O lavetă curată din microfibră, împăturită des, ridică murdăria desprinsă cu o presiune ușoară.' },
         { t: 'Jante, anvelope și geamuri', d: 'Lavete și produse dedicate pentru jante, anvelope și geamuri — separate de cele pentru vopsea.' },
         { t: 'Interior (dacă e ales)', d: 'Aspirare, bord, consolă și portiere, finalizate cu o ștergere ușoară a interiorului.' },
-        { t: 'Verificare finală', d: 'O ultimă privire în lumină bună, ca să prindem orice am fi ratat înainte de notificare.' },
+        { t: 'Verificare finală', d: 'O ultimă verificare, în lumină bună, ca să nu scape nimic înainte să te anunțăm.' },
       ],
 
       ecoTitle: 'Argumentul ecologic',
-      ecoText: 'O spălătorie clasică poate folosi 150\u2013300 de litri de apă per mașină, cea mai mare parte ajungând direct în canalizare, cu ulei, praf de frână și detergent cu tot. SmartWash folosește doar o fracțiune din asta per mașină, fără nimic de tratat sau eliminat ulterior.',
+      ecoText: 'O spălătorie clasică poate folosi 150\u2013300 de litri de apă per mașină, cea mai mare parte ajungând direct în canalizare, cu ulei, praf de frână și detergent cu tot. SmartWash folosește doar o fracțiune din această cantitate, fără nimic de tratat sau eliminat ulterior.',
       ecoPoints: [
-        { t: '99,3% mai puțină apă', d: 'Față de o spălătorie clasică obișnuită, per mașină.' },
-        { t: 'Fără reziduuri contaminate', d: 'Nimic cu ulei, praf de frână sau detergent nu ajunge în canalizare sau pe sol.' },
+        { t: '99,3% mai puțină apă', d: 'Față de o spălătorie clasică, per mașină.' },
+        { t: 'Fără reziduuri contaminate', d: 'Uleiul, praful de frână sau detergentul nu ajung niciodată în canalizare sau pe sol.' },
         { t: 'Fără infrastructură', d: 'Nu e nevoie de rețea de apă, canalizare sau curent oriunde operăm.' },
       ],
 
       comparisonTitle: 'De ce nu o spălătorie obișnuită?',
-      comparisonText: 'Fiecare opțiune de pe piață vine cu un compromis. Iată cum se poziționează SmartWash față de cele mai comune două alternative.',
+      comparisonText: 'Fiecare opțiune de pe piață are avantaje și dezavantaje. Iată cum stă SmartWash față de cele mai întâlnite două alternative.',
       comparison: [
-        { t: 'vs. spălătorie completă / tunel', d: 'Fără coadă, fără drum până acolo, și fără perii rotative care pot purta praf de la o mașină la alta și lăsa zgârieturi fine. Noi venim la tine.' },
-        { t: 'vs. spălătorie self-service', d: 'Fără stat afară cu furtunul pe frig sau ploaie, fără presiunea plății pe minut, și fără întins brațul până pe acoperișul unui SUV. Facem noi treaba, manual.' },
+        { t: 'vs. spălătorie completă / tunel', d: 'Fără coadă, fără drum până acolo și fără perii rotative care pot purta praf de la o mașină la alta, lăsând zgârieturi fine. Venim noi la tine.' },
+        { t: 'vs. spălătorie self-service', d: 'Fără stat afară cu furtunul pe frig sau ploaie, fără presiunea plății pe minut și fără întins brațul până pe acoperișul unui SUV. Facem noi treaba, manual.' },
         { t: 'vs. spălatul pe cont propriu', d: 'Fără furtun, fără găleată, fără o oră din weekend pierdută — și un rezultat mai constant, profesionist, de fiecare dată.' },
       ],
 
@@ -272,19 +272,19 @@ window.SmartWash.CONTENT = {
       hostTitle: 'Găzduiește SmartWash la locația ta',
       hostSubtitle: 'Pentru mall-uri, parcuri comerciale, evenimente pop-up, primării și orice operator de locație cu parcare. Un beneficiu premium despre care vizitatorii tăi vor vorbi — fără niciun cost pentru tine.',
       hostBenefits: [
-        { t: 'Cost zero de găzduire', d: 'Fără chirie, fără procent din venituri, fără taxă de instalare — niciodată.' },
+        { t: 'Cost zero de găzduire', d: 'Fără chirie, fără procent din venituri, fără taxă de instalare.' },
         { t: 'Fără infrastructură', d: 'Nu e nevoie de apă, canalizare sau curent din partea locației tale.' },
-        { t: 'Un beneficiu real', d: 'Vizitatorii rămân mai mult timp când știu că mașina le e îngrijită cât timp fac cumpărături sau lucrează.' },
-        { t: 'Echipă asigurată complet', d: 'Atendenți uniformizați și asigurați — fără nicio schimbare în accesul sau operațiunile locației tale.' },
+        { t: 'Un beneficiu real', d: 'Vizitatorii rămân mai mult timp când știu că mașina lor e pe mâini bune cât fac cumpărături sau lucrează.' },
+        { t: 'Echipă asigurată complet', d: 'Colegii noștri, uniformizați și asigurați — fără nicio schimbare în accesul sau activitatea locației tale.' },
       ],
 
       fleetTitle: 'Înscrie flota într-un program de spălare',
       fleetSubtitle: 'Pentru companii cu flote auto, și corporații sau fabrici cu parcare pentru angajați.',
       fleetBenefits: [
-        { t: 'Zero timpi morți', d: 'Mașinile sunt spălate parcate — fără drum la spălătorie, niciodată.' },
+        { t: 'Zero timpi morți', d: 'Mașinile sunt spălate chiar parcate — fără niciun drum la spălătorie.' },
         { t: 'Mereu impecabile', d: 'Mașinile pentru clienți rămân ireproșabile, după un program stabilit de tine.' },
         { t: 'O singură factură lunară', d: 'Preț simplu și predictibil per mașină — fără bătăi de cap administrative.' },
-        { t: 'Beneficiu pentru angajați', d: 'Extinde programul și la mașinile personale ale echipei, ca beneficiu.' },
+        { t: 'Beneficiu pentru angajați', d: 'Extinde programul și la mașinile personale ale echipei — un plus apreciat de oricine.' },
       ],
 
       segmentsTitle: 'Cu cine colaborăm',
