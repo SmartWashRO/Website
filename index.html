@@ -72,7 +72,7 @@
       <div class="hero-media">
         <img src="images/hero.jpg" alt="SmartWash attendant hand-washing a car, waterless" width="1600" height="900" loading="eager">
         <div class="droplet-badge badge-stat">
-          <div class="num">99.3%</div>
+          <div class="num" id="hero-badge-num">99,3%</div>
           <div class="label" id="hero-badge-1">less water</div>
         </div>
         <div class="droplet-badge badge-qr">
@@ -105,7 +105,7 @@
   <!-- STAT BAR -->
   <section class="stat-bar">
     <div class="container" id="stats-bar">
-      <div class="stat-item"><div class="num">99.3%</div><div class="label">less water used</div></div>
+      <div class="stat-item"><div class="num">99,3%</div><div class="label">mai puțină apă</div></div>
       <div class="stat-item"><div class="num">30-45 min</div><div class="label">average visit</div></div>
       <div class="stat-item"><div class="num">0</div><div class="label">trips to a car wash</div></div>
     </div>
@@ -320,7 +320,8 @@ function renderHome(lang) {
   document.getElementById('trust-line-text').textContent = lang === 'ro'
     ? 'Nicio aplicație de instalat — doar suni sau ne scrii'
     : 'No app to install — just call or message us';
-  document.getElementById('hero-badge-1').textContent = lang === 'ro' ? 'apă mai puțină' : 'less water';
+  document.getElementById('hero-badge-num').textContent = lang === 'ro' ? '99,3%' : '99.3%';
+  document.getElementById('hero-badge-1').textContent = lang === 'ro' ? 'mai puțină apă' : 'less water';
   document.getElementById('hero-badge-2').innerHTML = lang === 'ro' ? 'Fără<br>programare' : 'No booking<br>needed';
   document.getElementById('cta-call').textContent = c.ctaCall;
   document.getElementById('cta-whatsapp').textContent = c.ctaWhatsapp;
