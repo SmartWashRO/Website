@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartWash for Business — host it at your venue or wash your fleet</title>
+<meta name="description" content="Host SmartWash's waterless car wash at your mall, retail park, pop-up venue, or municipal site — or put your company fleet on a wash program. Zero cost, zero infrastructure.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="images/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="business">
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="SmartWash home">
+      <img src="images/logo-lockup-light.png" alt="SmartWash" class="brand-logo-img">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html" data-i18n="nav.home">Acasă</a>
+      <a href="about.html" data-i18n="nav.about">Cum funcționează</a>
+      <a href="index.html#pricing" data-i18n="nav.pricing">Prețuri</a>
+      <a href="business.html" aria-current="page" data-i18n="nav.business">Pentru companii</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" aria-label="Language">
+        <button class="lang-btn" data-lang="ro">RO</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="tel:+40755282775" data-contact="phoneTel" class="btn btn-primary" data-i18n="nav.call">Sună acum</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Acasă</a> / <span id="crumb-business">Pentru companii</span></div>
+      <div class="eyebrow" id="biz-badge">For Business</div>
+      <h1 id="biz-title">Bring SmartWash to your site — or your fleet</h1>
+      <p class="hero-sub" id="biz-subtitle" style="max-width:680px;margin-top:14px;">Two ways to work with us: host SmartWash as an amenity at your venue, or put your company's vehicles on a wash program.</p>
+    </div>
+  </section>
+
+  <section class="stat-bar">
+    <div class="container" id="biz-stats"></div>
+  </section>
+
+  <!-- HOST TRACK -->
+  <section class="section" id="host">
+    <div class="container track-block">
+      <div class="track-block-head">
+        <div class="eyebrow" id="host-title">Host SmartWash at your venue</div>
+        <h2 id="host-title-heading">Host SmartWash at your venue</h2>
+        <p id="host-subtitle">For malls, retail parks, pop-up events, municipalities, and any site operator with parking.</p>
+      </div>
+      <div class="card-grid" id="host-grid"></div>
+    </div>
+
+    <!-- FLEET TRACK -->
+    <div class="container track-block">
+      <div class="track-block-head">
+        <div class="eyebrow" id="fleet-title">Put your fleet on a wash program</div>
+        <h2 id="fleet-title-heading">Put your fleet on a wash program</h2>
+        <p id="fleet-subtitle">For companies with vehicle fleets, and corporates or factories with employee parking.</p>
+      </div>
+      <div class="card-grid" id="fleet-grid"></div>
+    </div>
+  </section>
+
+  <!-- SEGMENTS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow" style="justify-content:center" id="segments-title">Who we work with</div>
+        <h2 id="segments-title-heading">Who we work with</h2>
+      </div>
+      <div class="segment-grid" id="segments-grid"></div>
+    </div>
+  </section>
+
+  <!-- CLIENT CAROUSEL -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow" style="justify-content:center" id="clients-title">Sites & partners</div>
+      </div>
+    </div>
+    <div class="client-carousel">
+      <div class="client-track" id="client-track"></div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow" style="justify-content:center" id="form-title">Get in touch</div>
+        <h2 id="form-title-heading">Tell us about your site or fleet</h2>
+        <p id="form-subtitle">Share a few details and we'll come back with a plan.</p>
+      </div>
+
+      <div class="form-card reveal in-view" style="max-width:720px;margin:0 auto;">
+        <div class="form-success" role="status" id="form-success-msg">Thanks — your message is on its way. We'll reply shortly.</div>
+
+        <!--
+          Formspree setup: replace YOUR_FORM_ID with your real endpoint.
+          You can reuse the same form as contact.html — this form adds a
+          hidden "source" field so submissions are easy to tell apart.
+        -->
+        <form class="js-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="source" value="Business page inquiry">
+
+          <div class="field">
+            <label id="field-type-label">I'm reaching out about</label>
+            <div class="radio-group">
+              <label class="radio-pill">
+                <input type="radio" name="inquiry_type" value="Hosting a site" checked>
+                <span id="type-host">Hosting a site</span>
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="inquiry_type" value="Fleet program">
+                <span id="type-fleet">Fleet program</span>
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="inquiry_type" value="Something else">
+                <span id="type-other">Something else</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="biz-name" id="field-name-label">Full name</label>
+              <input type="text" id="biz-name" name="name" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="biz-company" id="field-company-label">Company / venue name</label>
+              <input type="text" id="biz-company" name="company" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="biz-phone" id="field-phone-label">Phone</label>
+              <input type="tel" id="biz-phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="biz-email" id="field-email-label">Email</label>
+              <input type="email" id="biz-email" name="email" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="biz-message" id="field-message-label">Message</label>
+            <textarea id="biz-message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;" id="field-submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h2 id="cta-title">Let's talk about your site</h2>
+          <p id="cta-sub">No commitment — tell us about your location or fleet and we'll take it from there.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="tel:+40755282775" data-contact="phoneTel" class="btn btn-on-dark" id="cta-call">Call now</a>
+          <a href="https://wa.me/40755282775" data-contact="whatsapp" target="_blank" rel="noopener" class="btn btn-ghost-on-dark" id="cta-whatsapp">WhatsApp us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="SmartWash home">
+          <img src="images/logo-lockup-dark.png" alt="SmartWash" class="brand-logo-img">
+        </a>
+        <p data-i18n="footer.tagline">Spălare auto fără apă, în Sibiu.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><img src="images/social-facebook.png" alt="" width="38" height="38"></a>
+          <a href="#" aria-label="Instagram"><img src="images/social-instagram.png" alt="" width="38" height="38"></a>
+          <a href="https://wa.me/40755282775" aria-label="WhatsApp" target="_blank" rel="noopener"><img src="images/social-whatsapp.png" alt="" width="38" height="38"></a>
+          <a href="#" aria-label="LinkedIn"><img src="images/social-linkedin.png" alt="" width="38" height="38"></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="about.html" data-i18n="nav.about">Cum funcționează</a></li>
+          <li><a href="index.html#pricing" data-i18n="nav.pricing">Prețuri</a></li>
+          <li><a href="business.html" data-i18n="nav.business">Pentru companii</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+40755282775" data-contact="phoneTel"><span data-contact="phone">+40 755 282 775</span></a></li>
+          <li><a href="mailto:hello@smartwash.ro" data-contact="email-href"><span data-contact="email">hello@smartwash.ro</span></a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">© 2026 SmartWash. Toate drepturile rezervate.</span>
+      <span>Sibiu, Romania</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/content.js"></script>
+<script src="js/clients.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+(function () {
+const { getLang, renderCommon, initLangToggle } = window.SmartWash;
+const CONTENT = window.SmartWash.CONTENT;
+const CLIENTS = window.SmartWash.CLIENTS;
+
+function iconZero(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><circle cx="12" cy="12" r="9"></circle><path d="M8 8l8 8"></path></svg>'; }
+function iconPlug(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><path d="M9 2v6M15 2v6M6 8h12l-1 6a5 5 0 0 1-5 4h0a5 5 0 0 1-5-4z"></path><path d="M12 18v4"></path></svg>'; }
+function iconStar(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><path d="M12 3l2.5 5.6 6.1.6-4.6 4.1 1.4 6-5.4-3.2-5.4 3.2 1.4-6-4.6-4.1 6.1-.6z"></path></svg>'; }
+function iconShieldCheck(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>'; }
+const hostIcons = [iconZero, iconPlug, iconStar, iconShieldCheck];
+
+function iconBolt(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"></path></svg>'; }
+function iconShine(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path><circle cx="12" cy="12" r="3.2"></circle></svg>'; }
+function iconInvoice(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><path d="M6 2h9l3 3v17H6z"></path><path d="M9 9h6M9 13h6M9 17h4"></path></svg>'; }
+function iconUsers(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><circle cx="17" cy="9" r="2.6"></circle><path d="M15 14.2c2.4.4 4 2.4 4 5.8"></path></svg>'; }
+const fleetIcons = [iconBolt, iconShine, iconInvoice, iconUsers];
+
+function renderClients() {
+  const tileHtml = (client) => client.logo
+    ? `<div class="client-tile"><img src="${client.logo}" alt="${client.name}"></div>`
+    : `<div class="client-tile is-placeholder">${client.name}</div>`;
+  // duplicate the list so the CSS marquee (-50%) loops seamlessly
+  const doubled = [...CLIENTS, ...CLIENTS];
+  document.getElementById('client-track').innerHTML = doubled.map(tileHtml).join('');
+}
+
+function renderBusiness(lang) {
+  const c = CONTENT[lang].business;
+  const nav = CONTENT[lang].nav;
+
+  document.getElementById('crumb-business').textContent = nav.business;
+  document.getElementById('biz-badge').textContent = c.badge;
+  document.getElementById('biz-title').textContent = c.title;
+  document.getElementById('biz-subtitle').textContent = c.subtitle;
+
+  document.getElementById('biz-stats').innerHTML = c.stats.map(s =>
+    `<div class="stat-item"><div class="num">${s.value}</div><div class="label">${s.label}</div></div>`).join('');
+
+  document.getElementById('host-title').textContent = c.hostTitle;
+  document.getElementById('host-title-heading').textContent = c.hostTitle;
+  document.getElementById('host-subtitle').textContent = c.hostSubtitle;
+  document.getElementById('host-grid').innerHTML = c.hostBenefits.map((b, i) => `
+    <div class="card reveal in-view">
+      <div class="icon-badge">${hostIcons[i]()}</div>
+      <h3>${b.t}</h3>
+      <p>${b.d}</p>
+    </div>`).join('');
+
+  document.getElementById('fleet-title').textContent = c.fleetTitle;
+  document.getElementById('fleet-title-heading').textContent = c.fleetTitle;
+  document.getElementById('fleet-subtitle').textContent = c.fleetSubtitle;
+  document.getElementById('fleet-grid').innerHTML = c.fleetBenefits.map((b, i) => `
+    <div class="card reveal in-view">
+      <div class="icon-badge">${fleetIcons[i]()}</div>
+      <h3>${b.t}</h3>
+      <p>${b.d}</p>
+    </div>`).join('');
+
+  document.getElementById('segments-title').textContent = c.segmentsTitle;
+  document.getElementById('segments-title-heading').textContent = c.segmentsTitle;
+  document.getElementById('segments-grid').innerHTML = c.segments.map(s => `
+    <div class="segment-pill"><span class="dot"></span>${s.t}</div>`).join('');
+
+  document.getElementById('clients-title').textContent = c.clientsTitle;
+
+  document.getElementById('form-title').textContent = c.badge;
+  document.getElementById('form-title-heading').textContent = c.formTitle;
+  document.getElementById('form-subtitle').textContent = c.formSubtitle;
+
+  const isRo = lang === 'ro';
+  document.getElementById('field-type-label').textContent = isRo ? 'Te contactăm în legătură cu' : "I'm reaching out about";
+  document.getElementById('type-host').textContent = isRo ? 'Găzduire locație' : 'Hosting a site';
+  document.getElementById('type-fleet').textContent = isRo ? 'Program de flotă' : 'Fleet program';
+  document.getElementById('type-other').textContent = isRo ? 'Altceva' : 'Something else';
+  document.getElementById('field-name-label').textContent = isRo ? 'Nume complet' : 'Full name';
+  document.getElementById('field-company-label').textContent = isRo ? 'Companie / locație' : 'Company / venue name';
+  document.getElementById('field-phone-label').textContent = isRo ? 'Telefon' : 'Phone';
+  document.getElementById('field-email-label').textContent = 'Email';
+  document.getElementById('field-message-label').textContent = isRo ? 'Mesaj' : 'Message';
+  document.getElementById('field-submit').textContent = isRo ? 'Trimite mesajul' : 'Send message';
+  document.getElementById('form-success-msg').textContent = isRo
+    ? 'Mulțumim — mesajul a fost trimis. Revenim în curând.'
+    : "Thanks — your message is on its way. We'll reply shortly.";
+
+  document.getElementById('cta-title').textContent = c.ctaTitle;
+  document.getElementById('cta-sub').textContent = c.ctaSub;
+  const home = CONTENT[lang].home;
+  document.getElementById('cta-call').textContent = home.ctaCall;
+  document.getElementById('cta-whatsapp').textContent = home.ctaWhatsapp;
+}
+
+const lang = getLang();
+renderCommon(lang);
+renderBusiness(lang);
+renderClients();
+initLangToggle(renderBusiness);
+})();
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
