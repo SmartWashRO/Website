@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — SmartWash</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="images/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .notfound{ min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: 40px 24px; }
+  .notfound .code{ font-family: var(--font-display); font-size: 100px; font-weight: 800; color: var(--blue); line-height:1; }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="SmartWash home">
+        <img src="images/logo-lockup-light.png" alt="SmartWash" class="brand-logo-img">
+      </a>
+      <div class="header-actions" style="margin-left:auto;">
+        <div class="lang-switch" aria-label="Language">
+          <button class="lang-btn" data-lang="ro">RO</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="notfound">
+    <div class="code">404</div>
+    <h1 id="nf-title">Acest loc de spălare e gol</h1>
+    <p style="max-width:420px;" id="nf-text">Pagina pe care o cauți nu e aici. Poate s-a mutat, sau linkul e greșit.</p>
+    <a href="index.html" class="btn btn-primary" style="margin-top:12px;" id="nf-back">Înapoi acasă</a>
+  </div>
+
+<script>
+(function () {
+  var LANG_KEY = 'smartwash-lang';
+  var copy = {
+    ro: {
+      title: 'Acest loc de spălare e gol',
+      text: 'Pagina pe care o cauți nu e aici. Poate s-a mutat, sau linkul e greșit.',
+      back: 'Înapoi acasă',
+    },
+    en: {
+      title: 'This wash bay is empty',
+      text: "The page you're looking for isn't here. It may have moved, or the link might be off.",
+      back: 'Back to home',
+    },
+  };
+
+  function getLang() {
+    var saved = window.localStorage ? window.localStorage.getItem(LANG_KEY) : null;
+    return (saved === 'ro' || saved === 'en') ? saved : 'ro';
+  }
+
+  function render(lang) {
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('nf-title').textContent = copy[lang].title;
+    document.getElementById('nf-text').textContent = copy[lang].text;
+    document.getElementById('nf-back').textContent = copy[lang].back;
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lang = btn.getAttribute('data-lang');
+      if (window.localStorage) window.localStorage.setItem(LANG_KEY, lang);
+      render(lang);
+    });
+  });
+
+  render(getLang());
+})();
+</script>
+</body>
+</html>

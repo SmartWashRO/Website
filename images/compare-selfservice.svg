@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <rect width="400" height="220" rx="18" fill="#eaf4fb"/>
+  <!-- bay stall frame -->
+  <line x1="80" y1="40" x2="80" y2="180" stroke="#0d1e3a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="320" y1="40" x2="320" y2="180" stroke="#0d1e3a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="40" y1="180" x2="360" y2="180" stroke="#0d1e3a" stroke-width="4" stroke-linecap="round"/>
+  <!-- car -->
+  <g fill="none" stroke="#2fb2ec" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M175 150c3-14 14-24 30-24h28c12 0 22 7 28 17l5 10"/>
+    <path d="M175 150h96"/>
+  </g>
+  <circle cx="198" cy="153" r="8" fill="none" stroke="#0d1e3a" stroke-width="3"/>
+  <circle cx="252" cy="153" r="8" fill="none" stroke="#0d1e3a" stroke-width="3"/>
+  <!-- person -->
+  <circle cx="130" cy="95" r="12" fill="none" stroke="#0d1e3a" stroke-width="3.5"/>
+  <path d="M130 107v38M130 118l-18 14M130 118l16 10" fill="none" stroke="#0d1e3a" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M130 145l-10 30M130 145l8 30" fill="none" stroke="#0d1e3a" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- wand / hose -->
+  <path d="M146 128 C170 132 185 138 196 148" fill="none" stroke="#0084c8" stroke-width="3" stroke-linecap="round"/>
+  <!-- spray droplets -->
+  <circle cx="205" cy="140" r="2.2" fill="#0084c8"/>
+  <circle cx="212" cy="150" r="1.8" fill="#0084c8"/>
+  <circle cx="200" cy="152" r="1.6" fill="#0084c8"/>
+  <circle cx="215" cy="135" r="1.6" fill="#0084c8"/>
+</svg>
