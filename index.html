@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartWash — Clean car. Smart choice. | Waterless car wash, Sibiu</title>
+<meta name="description" content="Park at any SmartWash site in Sibiu and we'll hand-wash your car — waterless — while you shop, work, or relax. No booking, no waiting.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="images/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="SmartWash home">
+      <img src="images/logo-lockup-light.png" alt="SmartWash" class="brand-logo-img">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/" aria-current="page" data-i18n="nav.home">Acasă</a>
+      <a href="about.html" data-i18n="nav.about">Cum funcționează</a>
+      <a href="/#pricing" data-i18n="nav.pricing">Prețuri</a>
+      <a href="locations.html" data-i18n="nav.locations">Locații</a>
+      <a href="business.html" data-i18n="nav.business">Pentru companii</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" aria-label="Language">
+        <button class="lang-btn" data-lang="ro">RO</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="tel:+40755282775" data-contact="phoneTel" class="btn btn-primary" data-i18n="nav.call">Sună acum</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <h1 id="hero-title">Clean car.<br>Smart choice.</h1>
+        <p class="hero-sub" id="hero-subtitle">A premium waterless detail, done by hand at your home or office — no hose, no runoff, no wait.</p>
+        <div class="hero-cta">
+          <a href="tel:+40755282775" data-contact="phoneTel" class="btn btn-primary" id="hero-cta-call">Call now</a>
+          <a href="https://wa.me/40755282775" data-contact="whatsapp" target="_blank" rel="noopener" class="btn btn-ghost" id="hero-cta-whatsapp">WhatsApp us</a>
+        </div>
+        <div class="trust-line">
+          <svg viewBox="0 0 24 24" class="icon-thin"><path d="M5 13l4 4 10-10"></path></svg>
+          <span id="trust-line-text">No app to install — just call or message us</span>
+        </div>
+      </div>
+
+      <!--
+        Hero media: currently a photo (images/hero.jpg).
+        To swap in your video later, replace the <img> below with:
+        <video autoplay muted loop playsinline poster="images/hero.jpg">
+          <source src="images/hero.mp4" type="video/mp4">
+        </video>
+        The .hero-media container (fixed 16:9, rounded, shadowed) and the
+        two floating badges need no changes either way.
+      -->
+      <div class="hero-media">
+        <img src="images/hero.jpg" alt="SmartWash attendant hand-washing a car, waterless" width="1600" height="900" loading="eager">
+        <div class="droplet-badge badge-stat">
+          <div class="num" id="hero-badge-num">99,3%</div>
+          <div class="label" id="hero-badge-1">less water</div>
+        </div>
+        <div class="droplet-badge badge-qr">
+          <span class="label" id="hero-badge-2">No booking<br>needed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION STRIP -->
+  <section class="location-strip">
+    <div class="container">
+      <div class="location-strip-inner" id="location-strip"></div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="section-head center">
+        <h2 id="benefits-heading">Why people choose SmartWash</h2>
+        <p id="benefits-subtitle">Everything about this is designed to save you time and hassle.</p>
+      </div>
+      <div class="card-grid" id="benefits-grid"></div>
+    </div>
+  </section>
+
+  <!-- STAT BAR -->
+  <section class="stat-bar">
+    <div class="container" id="stats-bar">
+      <div class="stat-item"><div class="num">99,3%</div><div class="label">mai puțină apă</div></div>
+      <div class="stat-item"><div class="num">30-45 min</div><div class="label">average visit</div></div>
+      <div class="stat-item"><div class="num">0</div><div class="label">trips to a car wash</div></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section section-alt" id="pricing">
+    <div class="container">
+      <div class="section-head center">
+        <h2 id="services-subtitle-heading">Two options</h2>
+        <p id="services-subtitle">No hidden extras.</p>
+      </div>
+      <div class="card-grid" id="services-grid" style="max-width:760px;margin:0 auto;grid-template-columns:repeat(2,1fr);"></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section bay-strip">
+    <div class="container">
+      <div class="section-head center">
+        <h2 id="how-title-heading">Five steps, zero hassle</h2>
+      </div>
+
+      <div class="bay-strip-track" id="steps-track">
+        <div class="bay-strip-line" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECO TEASER -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="eco-section reveal">
+        <div class="eco-heading" style="margin-bottom:24px;">
+          <h2 id="eco-heading-text">A wash that skips the hose entirely</h2>
+          <p id="eco-sub" style="margin-bottom:20px;">No tap, no drain, no runoff — just a cloth, a waterless formula, and an attendant who comes to you.</p>
+          <a href="about.html" class="btn btn-on-dark" id="eco-link" style="display:inline-flex;">See how it works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section" id="locations">
+    <div class="container">
+      <div class="section-head center">
+        <h2 id="map-title-heading">Where to find us</h2>
+        <p id="map-subtitle">Park at any of our sites in Sibiu — no need to book ahead.</p>
+      </div>
+      <div class="map-frame reveal in-view">
+        <div id="site-map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center">
+        <h2 id="testimonials-title">Client testimonials</h2>
+      </div>
+      <div class="testimonial-grid" id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head center">
+        <h2 id="faq-heading">Common questions</h2>
+      </div>
+      <div class="faq-list" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h2 id="cta-title">Ready for a spotless car, without lifting a finger?</h2>
+          <p id="cta-sub">Call or message us — we'll find a time that works.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="locations.html" class="btn btn-on-dark" id="cta-call">Locations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand" aria-label="SmartWash home">
+          <img src="images/logo-lockup-dark.png" alt="SmartWash" class="brand-logo-img">
+        </a>
+        <p data-i18n="footer.tagline">Spălare auto fără apă, în Sibiu.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><img src="images/social-facebook.png" alt="" width="38" height="38"></a>
+          <a href="#" aria-label="Instagram"><img src="images/social-instagram.png" alt="" width="38" height="38"></a>
+          <a href="https://wa.me/40755282775" aria-label="WhatsApp" target="_blank" rel="noopener"><img src="images/social-whatsapp.png" alt="" width="38" height="38"></a>
+          <a href="#" aria-label="LinkedIn"><img src="images/social-linkedin.png" alt="" width="38" height="38"></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/" data-i18n="nav.home">Acasă</a></li>
+          <li><a href="about.html" data-i18n="nav.about">Cum funcționează</a></li>
+          <li><a href="/#pricing" data-i18n="nav.pricing">Prețuri</a></li>
+          <li><a href="locations.html" data-i18n="nav.locations">Locații</a></li>
+          <li><a href="business.html" data-i18n="nav.business">Pentru companii</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+40755282775" data-contact="phoneTel"><span data-contact="phone">+40 755 282 775</span></a></li>
+          <li><a href="mailto:contact@smartwashromania.com" data-contact="email-href"><span data-contact="email">contact@smartwashromania.com</span></a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">© 2026 SmartWash. Toate drepturile rezervate.</span>
+      <span>Romania</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/content.js"></script>
+<script src="js/locations.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+(function () {
+const { getLang, renderCommon, initLangToggle } = window.SmartWash;
+const CONTENT = window.SmartWash.CONTENT;
+const LOCATIONS = window.SmartWash.LOCATIONS;
+
+function iconPin(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#fff"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>'; }
+function iconChat(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#fff"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>'; }
+function iconCard(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#fff"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>'; }
+function iconBag(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#fff"><path d="M6 8h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>'; }
+function iconSparkle(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#fff"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path><circle cx="12" cy="12" r="3.2"></circle></svg>'; }
+const stepIcons = [iconPin, iconChat, iconCard, iconBag, iconSparkle];
+
+function iconNoBooking(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path><path d="M9 15l2 2 4-4"></path></svg>'; }
+function iconClock(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>'; }
+function iconHand(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><path d="M7 11V6a2 2 0 0 1 4 0v5M11 11V4a2 2 0 0 1 4 0v7M15 11V6a2 2 0 0 1 4 0v7c0 4-2 7-7 7s-6-2-8-5l-1.5-3a1.7 1.7 0 0 1 2.8-1.8L7 13"></path></svg>'; }
+function iconBell(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><path d="M6 8a6 6 0 1 1 12 0c0 4.4 1 6 2 7H4c1-1 2-2.6 2-7z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>'; }
+function iconCardBlue(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>'; }
+function iconRelax(){ return '<svg viewBox="0 0 24 24" class="icon-thin" style="stroke:#0084c8"><circle cx="12" cy="12" r="9"></circle><path d="M8 13c1 1.5 2.4 2 4 2s3-.5 4-2"></path><path d="M9 9h.01M15 9h.01"></path></svg>'; }
+const benefitIcons = [iconNoBooking, iconClock, iconHand, iconBell, iconCardBlue, iconRelax];
+
+function starIcon(){ return '<svg viewBox="0 0 20 20"><path d="M10 1.5l2.5 5.6 6.1.6-4.6 4.1 1.4 6-5.4-3.2-5.4 3.2 1.4-6-4.6-4.1 6.1-.6z"/></svg>'; }
+
+let map;
+function initMap(lang) {
+  const mapEl = document.getElementById('site-map');
+  if (!mapEl || typeof L === 'undefined') return;
+
+  if (!map) {
+    map = L.map('site-map', { scrollWheelZoom: false });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19,
+    }).addTo(map);
+  }
+
+  map.eachLayer((layer) => { if (layer instanceof L.Marker) map.removeLayer(layer); });
+
+  const pinIcon = L.divIcon({
+    className: 'pin-marker',
+    html: '<svg width="34" height="42" viewBox="0 0 34 42" xmlns="http://www.w3.org/2000/svg"><path d="M17 0C7.6 0 0 7.6 0 17c0 12.7 17 25 17 25s17-12.3 17-25C34 7.6 26.4 0 17 0z" fill="#0d1e3a"/><circle cx="17" cy="17" r="7" fill="#2fb2ec"/></svg>',
+    iconSize: [34, 42],
+    iconAnchor: [17, 42],
+    popupAnchor: [0, -38],
+  });
+
+  const bounds = [];
+  LOCATIONS.forEach((loc) => {
+    const name = lang === 'ro' && loc.nameRo ? loc.nameRo : loc.name;
+    const marker = L.marker([loc.lat, loc.lng], { icon: pinIcon }).addTo(map);
+    marker.bindPopup(`<strong>${name}</strong>`);
+    bounds.push([loc.lat, loc.lng]);
+  });
+  if (bounds.length) map.fitBounds(bounds, { padding: [40, 40], maxZoom: 13 });
+  setTimeout(() => map.invalidateSize(), 200);
+}
+
+function renderHome(lang) {
+  const c = CONTENT[lang].home;
+
+  document.getElementById('hero-title').innerHTML = c.title.split('\n').join('<br>');
+  document.getElementById('hero-subtitle').innerHTML = c.subtitle.split('\n').join('<br>');
+  document.getElementById('hero-cta-call').textContent = c.ctaCall;
+  document.getElementById('hero-cta-whatsapp').textContent = c.ctaWhatsapp;
+  document.getElementById('trust-line-text').textContent = lang === 'ro'
+    ? 'Nicio aplicație de instalat — vino la oricare dintre locațiile noastre'
+    : 'No app to install — just visit our sites';
+  document.getElementById('hero-badge-num').textContent = lang === 'ro' ? '99,3%' : '99.3%';
+  document.getElementById('hero-badge-1').textContent = lang === 'ro' ? 'mai puțină apă' : 'less water';
+  document.getElementById('hero-badge-2').innerHTML = lang === 'ro' ? 'Fără<br>programare' : 'No booking<br>needed';
+  document.getElementById('cta-call').textContent = c.ctaLocations;
+  document.getElementById('cta-title').textContent = c.ctaTitle;
+  document.getElementById('cta-sub').textContent = c.ctaSub;
+
+  const stripEl = document.getElementById('location-strip');
+  const pillsHtml = LOCATIONS.map((loc) => {
+    const name = lang === 'ro' && loc.nameRo ? loc.nameRo : loc.name;
+    return `<span class="location-pill">${iconPin().replace('#fff','#0084c8')}${name}</span>`;
+  }).join('');
+  stripEl.innerHTML = `<span class="location-strip-label">${c.locationsIntro}</span>${pillsHtml}`;
+
+  document.getElementById('benefits-heading').textContent = c.benefitsTitle;
+  document.getElementById('benefits-subtitle').textContent = c.benefitsSubtitle;
+  document.getElementById('benefits-grid').innerHTML = c.benefits.map((b, i) => `
+    <div class="card reveal in-view">
+      <div class="icon-badge">${benefitIcons[i]()}</div>
+      <h3>${b.t}</h3>
+      <p>${b.d}</p>
+    </div>`).join('');
+
+  const statsBar = document.getElementById('stats-bar');
+  statsBar.innerHTML = c.stats.map(s => `<div class="stat-item"><div class="num">${s.value}</div><div class="label">${s.label}</div></div>`).join('');
+
+  document.getElementById('services-subtitle-heading').textContent = c.servicesTitle;
+  document.getElementById('services-subtitle').textContent = c.servicesSubtitle;
+  document.getElementById('services-grid').innerHTML = c.services.map(s => `
+    <div class="card reveal in-view">
+      <h3>${s.name}</h3>
+      <p>${s.desc}</p>
+      <p style="font-size:13px;color:var(--slate-light);margin-bottom:0;">${s.duration}</p>
+      <span class="price">${s.price}</span>
+    </div>`).join('');
+
+  document.getElementById('how-title-heading').textContent = c.howTitle;
+  const track = document.getElementById('steps-track');
+  const line = track.querySelector('.bay-strip-line');
+  track.innerHTML = '';
+  track.appendChild(line);
+  const stepLabel = lang === 'ro' ? 'Pasul' : 'Step';
+  c.steps.forEach((step, i) => {
+    const el = document.createElement('div');
+    el.className = 'bay-step in-view';
+    el.innerHTML = `
+      <div class="node">${stepIcons[i]()}</div>
+      <div class="time">${stepLabel} ${i + 1}</div>
+      <h3>${step.t}</h3>`;
+    track.appendChild(el);
+  });
+
+  document.getElementById('eco-heading-text').textContent = c.ecoTeaserHeading;
+  document.getElementById('eco-sub').textContent = c.ecoTeaserText;
+  document.getElementById('eco-link').textContent = c.ecoTeaserLink;
+
+  document.getElementById('map-title-heading').textContent = c.mapTitle;
+  document.getElementById('map-subtitle').textContent = c.mapSubtitle;
+  initMap(lang);
+
+  document.getElementById('testimonials-title').textContent = c.testimonialsTitle;
+  const stars = Array(5).fill(starIcon()).join('');
+  document.getElementById('testimonials-grid').innerHTML = c.testimonials.map(t => `
+    <div class="testimonial-card reveal in-view">
+      <div class="stars">${stars}</div>
+      <p>${t.quote}</p>
+      <div class="name">${t.name}</div>
+    </div>`).join('');
+
+  const isRo = lang === 'ro';
+  document.getElementById('faq-heading').textContent = isRo ? 'Întrebări frecvente' : 'Common questions';
+  const faqs = isRo ? [
+    { q: 'Trebuie să programez în avans?', a: 'Nu — doar parchezi la oricare dintre locațiile noastre și vine imediat un coleg din echipă. Fără programare, fără aplicație, fără așteptare.' },
+    { q: 'Cât durează o spălare?', a: '25–30 de minute pentru exterior, respectiv 40–45 de minute pentru exterior + interior.' },
+    { q: 'Cum plătesc?', a: 'Cu cardul sau online, direct la fața locului. Nu lucrăm cu numerar.' },
+    { q: 'De unde știu când mașina e gata?', a: 'Îți trimitem o notificare pe telefon exact în momentul în care terminăm.' },
+    { q: 'În ce zonă lucrați?', a: 'Momentan suntem la Shopping City Sibiu, Promenada Sibiu și Prima Shopping Center Sibiu.' },
+  ] : [
+    { q: 'Do I need to book in advance?', a: "No — just park at any of our sites and an attendant will come to you. No booking, no app." },
+    { q: 'How long does a wash take?', a: '25–30 minutes for exterior only, 40–45 minutes for exterior + interior.' },
+    { q: 'How do I pay?', a: "By card or online, right on site. We don't handle cash." },
+    { q: "How do I know when my car is ready?", a: "We send a notification straight to your phone the moment we're done." },
+    { q: 'Where do you currently operate?', a: 'Right now: Shopping City Sibiu, Promenada Mall Sibiu, and Prima Shopping Center Sibiu.' },
+  ];
+  document.getElementById('faq-list').innerHTML = faqs.map((f, i) => `
+    <div class="faq-item${i === 0 ? ' is-open' : ''}">
+      <button class="faq-q" type="button">${f.q}<span class="plus"></span></button>
+      <div class="faq-a"><p>${f.a}</p></div>
+    </div>`).join('');
+  document.querySelectorAll('.faq-q').forEach((btn) => {
+    btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('is-open'));
+  });
+}
+
+const lang = getLang();
+renderCommon(lang);
+renderHome(lang);
+initLangToggle(renderHome);
+})();
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
